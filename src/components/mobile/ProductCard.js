@@ -9,7 +9,7 @@ const ProductCard = ({
 
 }) => {
     return (
-        <div className="max-w-md mx-auto bg-slate-100 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+        <div className="flex-1 max-w-md mx-auto bg-slate-100 rounded-xl shadow-md overflow-hidden font-Montserrat w-[85%]">
             <div className="md:flex">
                 <div className="md:flex-shrink-0">
                     <img
@@ -19,7 +19,7 @@ const ProductCard = ({
                     />
                 </div>
                 <div className="p-8">
-                    <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
+                    <div className="uppercase tracking-wide text-sm text-cyan-500 font-semibold">
                         {category}
                     </div>
                     <a
@@ -32,7 +32,7 @@ const ProductCard = ({
                     <p className="mt-2 text-gray-500">{price}</p>
                     <div className="mt-6">
                         <button
-                            className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded"
+                            className="bg-zinc-700 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded"
                         >
                             Añadir al carrito
                         </button>

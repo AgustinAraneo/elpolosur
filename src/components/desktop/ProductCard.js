@@ -3,24 +3,24 @@ import React from 'react';
 const ProductCard = ({
     image,
     name,
-    category,
+    company,
     description,
     price,
 
 }) => {
     return (
-        <div className="max-w-md mx-auto bg-slate-100 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+        <div className="flex-1 max-w-md mx-auto bg-slate-100 rounded-xl shadow-md overflow-hidden md:max-w-2xl font-Montserrat">
             <div className="md:flex">
                 <div className="md:flex-shrink-0">
                     <img
-                        className="h-48 w-full object-cover md:w-48"
+                        className="h-full w-full object-cover md:w-48"
                         src={image}
                         alt={name}
                     />
                 </div>
                 <div className="p-8">
-                    <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
-                        {category}
+                    <div className="uppercase tracking-wide text-sm text-cyan-500 font-semibold">
+                        {company}
                     </div>
                     <a
                         href="/"
@@ -28,11 +28,11 @@ const ProductCard = ({
                     >
                         {name}
                     </a>
-                    <p className="mt-2 text-gray-500">{description}</p>
+                    <p className="mt-2 text-gray-500 text-sm">{description}</p>
                     <p className="mt-2 text-gray-500">{price}</p>
                     <div className="mt-6">
                         <button
-                            className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded"
+                            className="bg-zinc-700 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded"
                         >
                             Añadir al carrito
                         </button>

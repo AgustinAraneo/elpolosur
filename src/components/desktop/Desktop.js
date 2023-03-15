@@ -3,6 +3,7 @@ import NavBar from './NavBar';
 import Home from './Home';
 import ScrollButton from '../ScrollButton';
 import Productos from './Productos';
+import Footer from './Footer';
 
 const Desktop = () => {
     return (
@@ -17,6 +18,9 @@ const Desktop = () => {
             </div>
             <div className='pt-[calc(100vh*1)]'>
                 <Productos />
+            </div>
+            <div>
+                <Footer />
             </div>
         </div>
     );

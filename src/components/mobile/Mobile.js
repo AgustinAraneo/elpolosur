@@ -3,6 +3,7 @@ import NavBar from './NavBar'
 import Home from './Home'
 import ScrollButton from '../ScrollButton'
 import Productos from './Productos'
+import Footer from './Footer'
 
 const Mobile = () => {
     return (
@@ -18,6 +19,7 @@ const Mobile = () => {
             <div className='pt-[calc(100vh*1)] '>
                 <Productos />
             </div>
+            <Footer />
         </div>
     )
 }
