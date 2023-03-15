@@ -38,7 +38,7 @@ const Productos = () => {
                     name="Carpa Iglú"
                     company="National Geographic"
                     description="Carpa iglú modelo Ottawa, diseañada para 6 personas"
-                    price="$13.500" />
+                    price="$80.360" />
             </div>
             <div>
                 <ItemListContainer greeting="Buenas! Aca estoy para cumplir con la actividad. Soy el ItemListContainer" />
