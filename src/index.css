@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
+
+
+/* CSS de la scroll bar */
+body::-webkit-scrollbar {
+    width: 13px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgb(116, 116, 116);
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #282828;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: rgb(74, 74, 74);
+}
+
+/* Fin del CSS de la scroll bar  */
