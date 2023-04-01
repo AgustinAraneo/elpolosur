@@ -1,28 +1,23 @@
 import React from 'react';
-import NavBar from './NavBar';
-import Home from './Home';
-import ScrollButton from '../ScrollButton';
-import Productos from './Productos';
-import Footer from './Footer';
+import Inicio from '../../pages/Inicio';
+import Productos from '../../pages/Productos';
+import SobreNosotros from '../../pages/SobreNosotros';
+import Contacto from '../../pages/Contacto';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const Desktop = () => {
     return (
-        <div className='relative'>
-            <div className='absolute top-0 left-0 w-full h-[100vh] bg-home bg-cover bg-center'>
-                <div className='relative'>
-                    <NavBar style={{ zIndex: 20 }} />
-                    <ScrollButton />
-                    <Home />
-                </div>
-                <div className="absolute bottom-0 left-0 w-full h-[7%] bg-black/80"></div>
-            </div>
-            <div className='pt-[calc(100vh*1)]'>
-                <Productos />
-            </div>
+        <Router>
+
             <div>
-                <Footer />
+                <Routes>
+                    <Route path="/" element={<Inicio />} />
+                    <Route path="/productos" element={<Productos />} />
+                    <Route path="/sobreNosotros" element={<SobreNosotros />} />
+                    <Route path="/contacto" element={<Contacto />} />
+                </Routes>
             </div>
-        </div>
+        </Router>
     );
 };
 

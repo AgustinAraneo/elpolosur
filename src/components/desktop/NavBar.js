@@ -1,5 +1,6 @@
 import React from 'react';
 import CartWidget from './CartWidget';
+import { Link } from "react-router-dom";
 
 function Navbar() {
     return (
@@ -13,34 +14,22 @@ function Navbar() {
             </div>
             <div className="w-full flex-grow lg:flex lg:items-center lg:w-auto">
                 <div className="text-lg lg:flex-grow flex justify-end gap-x-20 uppercase font-Roboto items-center max-[1200px]:gap-x-4 max-[1000px]:text-base">
-                    <a
-                        href="/"
-                        className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4"
-                    >
+                    <Link className="Link block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4" to="/" >
                         Inicio
-                    </a>
-                    <a
-                        href="/"
-                        className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4"
-                    >
+                    </Link>
+                    <Link className="Link block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4" to="/productos" >
                         Productos
-                    </a>
-                    <a
-                        href="/"
-                        className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4"
-                    >
+                    </Link>
+                    <Link className="Link block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4" to="/sobreNosotros" >
                         Sobre Nosotros
-                    </a>
-                    <a
-                        href="/"
-                        className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-400"
-                    >
+                    </Link>
+                    <Link className="Link block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4" to="/contacto" >
                         Contacto
-                    </a>
+                    </Link>
                     <CartWidget />
                 </div>
             </div>
-        </nav>
+        </nav >
     );
 }
 
