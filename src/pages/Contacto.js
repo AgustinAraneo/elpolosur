@@ -1,7 +1,7 @@
+/* eslint-disable jsx-a11y/iframe-has-title */
 import React from 'react'
 import NavBar from '../components/desktop/NavBar'
 import Footer from '../components/desktop/Footer'
-import { BsFullscreen } from 'react-icons/bs';
 
 const Contacto = () => {
     return (
