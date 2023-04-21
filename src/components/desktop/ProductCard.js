@@ -15,12 +15,9 @@ const ProductCard = ({ data }) => {
                     <div className="uppercase tracking-wide text-sm text-cyan-500 font-semibold">
                         {data.company && data.company.name}
                     </div>
-                    <a
-                        href="/"
-                        className="block mt-1 text-lg leading-tight font-medium text-black hover:underline"
-                    >
+                    <p className="block mt-1 text-lg leading-tight font-medium text-black hover:underline">
                         {data.name}
-                    </a>
+                    </p>
                     <p className="mt-2 text-gray-500 text-sm">{data.email}</p>
                     <p className="mt-2 text-gray-500">{data.username}</p>
                     <div className="mt-6">
