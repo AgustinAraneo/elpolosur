@@ -43,10 +43,10 @@ const UserDetail = () => {
     }
 
     return (
-        <div>
+        <div className="bg-zinc-700 h-screen">
             <NavBar />
             <div className="flex flex-col items-center justify-center mb-10 mt-4">
-                <h1 className="uppercase tracking-wide text-xl text-cyan-500 font-semibold mb-4">Producto:</h1>
+                <h1 className="text-4xl text-cyan-500 text-center mt-3 mb-3 font-bold">PRODUCTOS:</h1>
                 <ProductCard data={product} />
             </div>
             <div className="absolute bottom-0 w-full">

@@ -2,7 +2,7 @@ import React from "react";
 
 const ProductCard = ({ data }) => {
     return (
-        <div className="flex-1 max-w-md mx-auto bg-slate-100 rounded-xl shadow-md overflow-hidden md:max-w-2xl font-Montserrat">
+        <div className="flex-1 max-w-md mx-auto bg-slate-100 rounded-xl shadow-md overflow-hidden md:max-w-2xl font-Montserrat h-[18rem] mb-20">
             <div className="md:flex">
                 <div className="md:flex-shrink-0">
                     <img
@@ -15,11 +15,11 @@ const ProductCard = ({ data }) => {
                     <div className="uppercase tracking-wide text-sm text-cyan-500 font-semibold">
                         {data.name}
                     </div>
-                    <p className="block mt-1 text-lg leading-tight font-medium text-black hover:underline">
-                        {data.price}
+                    <p className="block mt-1 text-lg leading-tight font-medium text-black">
+                        Marca: {data.brand}
                     </p>
-                    <p className="mt-2 text-gray-500 text-sm">{data.category}</p>
-                    <p className="mt-2 text-gray-500">{data.brand}</p>
+                    <p className="mt-2 text-gray-500 text-sm">Categoria: {data.category}</p>
+                    <p className="mt-2 text-gray-500">${data.price}</p>
                     <div className="mt-6">
                         <button className="bg-zinc-700 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded">
                             Añadir al carrito

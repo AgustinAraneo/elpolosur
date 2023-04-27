@@ -43,7 +43,7 @@ function Checkout() {
     };
 
     return (
-        <div className=''>
+        <div className='h-screen'>
             <Navbar />
             <form onSubmit={handleSubmit} className="max-w-lg mx-auto m-10">
                 <h2 className="text-2xl font-medium mb-4">Checkout</h2>
@@ -79,8 +79,9 @@ function Checkout() {
                     </div>
                 </div>
             ) : null}
-
-            <Footer />
+            <div className='absolute bottom-0 right-0 left-0'>
+                <Footer />
+            </div>
         </div>
     );
 }
