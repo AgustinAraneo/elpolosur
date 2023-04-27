@@ -7,9 +7,11 @@ import Contacto from '../../pages/Contacto'
 import Checkout from '../../pages/Checkout'
 import Category from '../../pages/Category';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import CartProvider from '../context/CartContext';
 
 const Desktop = () => {
     return (
+        <CartProvider>
         <Router>
             <div>
                 <Routes>
@@ -23,6 +25,7 @@ const Desktop = () => {
                 </Routes>
             </div>
         </Router>
+        </CartProvider>
     );
 };
 

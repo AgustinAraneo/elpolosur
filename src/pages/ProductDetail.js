@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ProductCard from '../components/desktop/ProductCard'
 import NavBar from '../components/desktop/NavBar';
@@ -8,12 +8,15 @@ import { FaSpinner } from 'react-icons/fa';
 // Firebase
 import { db } from "../firebase/firebaseConfig";
 import { doc, getDoc } from "firebase/firestore";
+import { CartContext } from "../components/context/CartContext";
 
 const UserDetail = () => {
     const [loading, setLoading] = useState(true);
     const [product, setProduct] = useState({});
 
     let { id } = useParams();
+
+    const { addToCart } = useContext(CartContext)
 
     useEffect(() => {
         const getProduct = async () => {

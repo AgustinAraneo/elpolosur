@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { BsCartPlus } from 'react-icons/bs';
+import { CartContext } from '../context/CartContext';
 
 function CartWidget() {
-    return (
-        <div className="flex items-center">
-            <BsCartPlus className="h-8 w-8 text-white cursor-pointer hover:text-gray-400" />
-            <span className="bg-red-500 text-white rounded-full h-5 w-5 ml-1 flex items-center justify-center text-sm font-Montserrat">
-                3
-            </span>
-        </div>
-    );
+  const { cartArray } = useContext(CartContext);
+
+  return (
+    <div className="flex items-center">
+      <BsCartPlus className="w-8 h-8 text-white cursor-pointer hover:text-gray-400" />
+      <span className="flex items-center justify-center w-5 h-5 ml-1 text-sm text-white bg-red-500 rounded-full font-Montserrat">
+        {cartArray.length}
+      </span>
+    </div>
+  );
 }
 
 export default CartWidget;
