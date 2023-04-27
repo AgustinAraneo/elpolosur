@@ -1,34 +1,44 @@
 import React from "react";
 
 const ProductCard = ({ data }) => {
-    return (
-        <div className="flex-1 max-w-md mx-auto bg-slate-100 rounded-xl shadow-md overflow-hidden md:max-w-2xl font-Montserrat h-[18rem] mb-20">
-            <div className="md:flex">
-                <div className="md:flex-shrink-0">
-                    <img
-                        className="h-full w-full object-cover md:w-48"
-                        src={data.img}
-                        alt={data.name}
-                    />
-                </div>
-                <div className="p-8">
-                    <div className="uppercase tracking-wide text-sm text-cyan-500 font-semibold">
-                        {data.name}
-                    </div>
-                    <p className="block mt-1 text-lg leading-tight font-medium text-black">
-                        Marca: {data.brand}
-                    </p>
-                    <p className="mt-2 text-gray-500 text-sm">Categoria: {data.category}</p>
-                    <p className="mt-2 text-gray-500">${data.price}</p>
-                    <div className="mt-6">
-                        <button className="bg-zinc-700 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded">
-                            Añadir al carrito
-                        </button>
-                    </div>
-                </div>
-            </div>
+  return (
+    <div className="flex items-center mt-4 mb-4 overflow-hidden rounded-lg shadow-md bg-zinc-200 w-[35%]">
+      <div className="w-1/2 h-auto">
+        <img
+          className="object-cover w-full h-[25rem]"
+          src={data.img}
+          alt={data.name}
+        />
+      </div>
+      <div className="w-1/2 p-6">
+        <h3 className="mb-2 text-2xl font-bold text-cyan-500">{data.name}</h3>
+        <p className="mb-2 text-base text-gray-700">Marca: {data.brand}</p>
+        <p className="mb-2 text-base text-gray-700">Categoría: {data.category}</p>
+        <p className="mb-4 text-3xl font-bold text-gray-700">${data.price}</p>
+        <div className="flex items-center justify-between">
+          <div className="flex items-center flex-auto w-32">
+            <label
+              className="block mb-2 text-sm font-bold text-gray-700"
+              htmlFor="quantity"
+            >
+              Cantidad:
+            </label>
+            <input
+              className="px-3 py-2 m-4 leading-tight text-gray-700 border-2 border-indigo-500 rounded appearance-none w-14 focus:outline-none focus:shadow-outline"
+              id="quantity"
+              type="number"
+              defaultValue={1}
+              min={1}
+              max={10}
+            />
+          </div>
         </div>
-    );
+          <button className="px-6 py-2 text-sm font-bold text-white bg-indigo-500 rounded hover:bg-indigo-600">
+            Agregar al carrito
+          </button>
+      </div>
+    </div>
+  );
 };
 
 export default ProductCard;

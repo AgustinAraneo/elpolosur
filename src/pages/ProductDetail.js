@@ -36,17 +36,17 @@ const UserDetail = () => {
         return (
             <div>
                 <div className="flex items-center justify-center h-screen">
-                    <FaSpinner className="animate-spin text-4xl text-gray-500" />
+                    <FaSpinner className="text-4xl text-gray-500 animate-spin" />
                 </div>
             </div>
         );
     }
 
     return (
-        <div className="bg-zinc-700 h-screen">
+        <div className="h-screen bg-zinc-700">
             <NavBar />
-            <div className="flex flex-col items-center justify-center mb-10 mt-4">
-                <h1 className="text-4xl text-cyan-500 text-center mt-3 mb-3 font-bold">PRODUCTOS:</h1>
+            <div className="flex flex-col items-center justify-center mt-4 mb-10">
+                <h1 className="mt-3 mb-3 text-4xl font-bold text-center text-cyan-500">PRODUCTOS:</h1>
                 <ProductCard data={product} />
             </div>
             <div className="absolute bottom-0 w-full">

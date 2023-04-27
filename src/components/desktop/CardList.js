@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ProductCard from "./ProductCard";
+import ProductCardInfo from "./ProductCardInfo";
 import { Link } from "react-router-dom";
 // Firebase
 import { db } from "../../firebase/firebaseConfig"
@@ -30,7 +30,7 @@ const CardList = () => {
                     <div key={camping.name}>
                         <Link to={`/item/${camping.id}`}>
                             <div className=''>
-                                <ProductCard data={camping} />
+                                <ProductCardInfo data={camping} />
                             </div>
                         </Link>
                     </div>
