@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CartWidget from './CartWidget';
 import { Link } from "react-router-dom";
 
 function Navbar() {
+    const [showDropdown, setShowDropdown] = useState(false);
+
+    const toggleDropdown = () => {
+        setShowDropdown(!showDropdown);
+    };
+
     return (
         <nav className="flex items-center justify-between flex-wrap bg-black/80 p-6">
             <div className="flex items-center flex-shrink-0 text-white">
@@ -17,9 +23,24 @@ function Navbar() {
                     <Link className="Link block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4" to="/" >
                         Inicio
                     </Link>
-                    <Link className="Link block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4" to="/productos" >
-                        Productos
-                    </Link>
+                    <div className="relative">
+                        <button className="Link block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4" onClick={toggleDropdown}>
+                            PRODUCTOS
+                        </button>
+                        {showDropdown && (
+                            <div className="absolute z-10 bg-black/80 py-2 rounded-lg">
+                                <Link className="block px-4 py-2 text-white hover:text-gray-400" to="/category/Carpa" >
+                                    Carpas
+                                </Link>
+                                <Link className="block px-4 py-2 text-white hover:text-gray-400" to="/category/Conservadora" >
+                                    Conservadoras
+                                </Link>
+                                <Link className="block px-4 py-2 text-white hover:text-gray-400" to="/category/Mochila" >
+                                    Mochilas
+                                </Link>
+                            </div>
+                        )}
+                    </div>
                     <Link className="Link block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4" to="/sobreNosotros" >
                         Sobre Nosotros
                     </Link>

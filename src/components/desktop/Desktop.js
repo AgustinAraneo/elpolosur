@@ -5,6 +5,7 @@ import ProductDetail from '../../pages/ProductDetail'
 import SobreNosotros from '../../pages/SobreNosotros'
 import Contacto from '../../pages/Contacto'
 import Checkout from '../../pages/Checkout'
+import Category from '../../pages/Category';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const Desktop = () => {
@@ -18,6 +19,7 @@ const Desktop = () => {
                     <Route path="/contacto" element={<Contacto />} />
                     <Route path="/item/:id" element={<ProductDetail />} />
                     <Route path="/checkout" element={<Checkout />} />
+                    <Route path="/category/:category" element={<Category />} />
                 </Routes>
             </div>
         </Router>
