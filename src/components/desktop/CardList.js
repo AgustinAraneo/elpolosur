@@ -1,24 +1,37 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
-import axios from "axios";
 import { Link } from "react-router-dom";
+// Firebase
+import { db } from "../../firebase/firebaseConfig"
+import { collection, query, getDocs } from "firebase/firestore"
 
 const CardList = () => {
-    const [users, setUsers] = useState([]);
+
+    const [camping, setCamping] = useState([])
+
+    const q = query(collection(db, "camping"))
 
     useEffect(() => {
-        axios("https://jsonplaceholder.typicode.com/users").then((res) =>
-            setUsers(res.data)
-        );
-    }, []);
+        const getCamping = async () => {
+            const querySnapshot = await getDocs(q);
+            const docs = []
+            querySnapshot.forEach((doc) => {
+                docs.push({ ...doc.data(), id: doc.id })
+            })
+            setCamping(docs)
+        }
+        getCamping()
+    }, [q])
 
     return (
         <div className="grid grid-cols-3 gap-4 w-[80%] mx-auto m-4">
-            {users.map((user) => {
+            {camping.map((camping) => {
                 return (
-                    <div key={user.id}>
-                        <Link to={`/item/${user.id}`}>
-                            <ProductCard data={user} />
+                    <div key={camping.name}>
+                        <Link to={`/item/${camping.id}`}>
+                            <div className=''>
+                                <ProductCard data={camping} />
+                            </div>
                         </Link>
                     </div>
                 );
