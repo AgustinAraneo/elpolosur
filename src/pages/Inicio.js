@@ -7,7 +7,7 @@ import Footer from '../components/desktop/Footer';
 
 const Inicio = () => {
     return (
-        <div className='relative'>
+        <div className='relative font-Montserrat'>
             <div className='absolute top-0 left-0 w-full h-[100vh] bg-home bg-cover bg-center'>
                 <div className='relative'>
                     <NavBar />

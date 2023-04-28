@@ -4,7 +4,7 @@ import Footer from '../components/desktop/Footer'
 
 const SobreNosotros = () => {
     return (
-        <div>
+        <div className='font-Montserrat'>
             <NavBar />
             <div className="bg-white">
                 <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 mb-10">

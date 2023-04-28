@@ -14,7 +14,7 @@ function Navbar() {
     };
 
     return (
-        <nav className="flex flex-wrap items-center justify-between p-6 bg-black/80">
+        <nav className="flex flex-wrap items-center justify-between p-6 bg-black/80 font-Montserrat">
             <div className="flex items-center flex-shrink-0 text-white">
                 <div className="bg-transparent p-2 rounded border-[3px] border-white w-52 h-14">
                     <p className="text-3xl font-medium tracking-wider text-center text-gray-400 uppercase font-Roboto">
@@ -41,6 +41,12 @@ function Navbar() {
                                 </Link>
                                 <Link className="block px-4 py-2 text-white hover:text-gray-400" to="/category/Mochila" onClick={hideDropdown}>
                                     Mochilas
+                                </Link>
+                                <Link className="block px-4 py-2 text-white hover:text-gray-400" to="/category/Bolsa" onClick={hideDropdown}>
+                                    Bolsas de Dormir
+                                </Link>
+                                <Link className="block px-4 py-2 text-white hover:text-gray-400" to="/category/Estaca" onClick={hideDropdown}>
+                                    Estacas
                                 </Link>
                             </div>
                         )}

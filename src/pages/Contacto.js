@@ -7,7 +7,7 @@ const Contacto = () => {
     return (
         <div>
             <NavBar />
-            <div className="bg-gray-200">
+            <div className="bg-gray-200 font-Montserrat">
                 <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
                     <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
                         Contactanos

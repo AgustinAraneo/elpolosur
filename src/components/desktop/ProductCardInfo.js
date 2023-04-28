@@ -2,7 +2,7 @@ import React from "react";
 
 const ProductCardInfo = ({ data }) => {
     return (
-        <div className="flex-1 max-w-md mx-auto bg-zinc-200 rounded-xl shadow-md overflow-hidden md:max-w-2xl font-Montserrat h-[18rem] mb-20">
+        <div className="flex-1 max-w-md mx-auto bg-zinc-200 rounded-xl shadow-md overflow-hidden md:max-w-2xl font-Montserrat h-[18rem] mb-20 font-Montserrat">
             <div className="md:flex">
                 <div className="md:flex-shrink-0">
                     <img

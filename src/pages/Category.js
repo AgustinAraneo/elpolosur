@@ -29,7 +29,7 @@ const Category = () => {
     }, [q]);
 
     return (
-        <div className="bg-zinc-700">
+        <div className="bg-zinc-700 font-Montserrat">
             <Navbar />
             <div className="">
                 <h1 className="mt-6 mb-6 text-4xl font-bold text-center text-cyan-500">
@@ -45,7 +45,7 @@ const Category = () => {
                             return (
                                 <div key={data.id}>
                                     <Link to={`/item/${data.id}`}>
-                                    <ProductCardInfo data={data} />
+                                        <ProductCardInfo data={data} />
                                     </Link>
                                 </div>
                             );

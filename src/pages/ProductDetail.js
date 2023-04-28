@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ProductCard from '../components/desktop/ProductCard'
 import NavBar from '../components/desktop/NavBar';
@@ -8,15 +8,12 @@ import { FaSpinner } from 'react-icons/fa';
 // Firebase
 import { db } from "../firebase/firebaseConfig";
 import { doc, getDoc } from "firebase/firestore";
-import { CartContext } from "../components/context/CartContext";
 
 const UserDetail = () => {
     const [loading, setLoading] = useState(true);
     const [product, setProduct] = useState({});
 
     let { id } = useParams();
-
-    const { addToCart } = useContext(CartContext)
 
     useEffect(() => {
         const getProduct = async () => {
@@ -46,7 +43,7 @@ const UserDetail = () => {
     }
 
     return (
-        <div className="h-screen bg-zinc-700">
+        <div className="h-screen bg-zinc-700 font-Montserrat">
             <NavBar />
             <div className="flex flex-col items-center justify-center mt-4 mb-10">
                 <h1 className="mt-3 mb-3 text-4xl font-bold text-center text-cyan-500">PRODUCTOS:</h1>
